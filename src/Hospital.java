@@ -6,16 +6,16 @@ public class Hospital{
         patientCount = 0;
     }
     public boolean addPatient(){
-        if (patientCount < patients.length){
+        if (patientCount<patients.length){
             patients[patientCount] = Patient.createPatient();
             patientCount++;
             return true;
         }
         return false;
     }
-    public Patient getPatient(int index){
-        if (index >= 0 && index < patientCount){
-            return patients[index];
+    public Patient getPatient(int i){
+        if (i>=0 && i<patientCount){
+            return patients[i];
         }
         return null;
     }
