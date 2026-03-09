@@ -1,6 +1,6 @@
 import java.util.Random;
 public class Simulation {
-    private static Random random = new Random();
+    public static Random random = new Random();
 
     private Hospital hospital;
     private int currentTime;
