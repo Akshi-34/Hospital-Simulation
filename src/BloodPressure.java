@@ -14,4 +14,5 @@ public class BloodPressure extends Observations {
     }
     private int systolic;
     private int diastolic;
+
 }
