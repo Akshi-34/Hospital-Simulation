@@ -1,6 +1,6 @@
 public class Temperature extends Observations{
     public boolean dangerous(){
-        if ((celsiusValue>37.8) || (celsiusValue<35)){
+        if ((celsiusValue>39.4) || (celsiusValue<35)){
             return true;
         }
         return false;
