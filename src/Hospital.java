@@ -47,7 +47,6 @@ public class Hospital {
         return normalQueue.dequeue();
     }
     public void update(int currentTime) {
-        // patients generate alerts
         for (int i = 0; i < patientCount; i++) {
             patients[i].generateAlerts(this, currentTime);
         }
