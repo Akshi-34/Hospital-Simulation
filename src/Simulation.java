@@ -20,7 +20,7 @@ public class Simulation {
     }
 
     public void setup(){
-        hospital = new Hospital(maxPatients);
+        hospital = new Hospital(maxPatients, maxNurses);
         currentTime = 0;
 
     }
