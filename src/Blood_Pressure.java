@@ -1,10 +1,10 @@
 public class Blood_Pressure extends Observations{
     public boolean dangerous(){
         if ((Systolic>=120 && Systolic<=129) && Diastolic<80){
-            return true;
+            return false;
         } else if((Systolic>=130 && Systolic<=139) || (Diastolic>=80 && Diastolic<=89)){
-            return true;
-        } else if(Systolic>=140 && Diastolic>=90) {
+            return false;
+        } else if(Systolic>=140 || Diastolic>=90) {
             return true;
         }
         return false;
