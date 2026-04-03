@@ -1,7 +1,7 @@
 public class CallBellDevice extends Devices {
     private boolean active = false;
     public Observations sample() {
-        if (!active && Simulation.random.nextDouble() < 0.005) {
+        if (!active && Simulation.random.nextDouble() < 0.003) {
             active = true;
         }
         if (active) {
