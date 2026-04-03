@@ -6,6 +6,7 @@ public class Simulation {
     private int currentTime;
     private int maxTime;
     private int timeIncrement;
+    private int maxNurses;
     private int maxPatients;
 
 
@@ -14,6 +15,7 @@ public class Simulation {
         maxPatients = 20;
         maxTime = 2880; //48 hours
         timeIncrement = 10; //time skips about 10mins each increment
+        maxNurses = 5;
         currentTime = 0;
     }
 
@@ -25,14 +27,14 @@ public class Simulation {
 
     public void run(){
         while (currentTime < maxTime) {
-
             currentTime += timeIncrement;
+            hospital.update(currentTime);
         }
     }
 
     public void process(){
         System.out.println("Total patients: " + hospital.getPatientCount());
-        System.out.println("Max Capacity: " + hospital.maxPatients());
+        System.out.println("Max Capacity: " + hospital.getMaxPatients());
 
     }
 

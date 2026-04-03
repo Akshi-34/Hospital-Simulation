@@ -9,7 +9,7 @@ public class Nurse {
         rand = new Random();
     }
 
-    public void processAlerts (Queue queue, int currentTime){
+    public void processAlerts(Hospital hospital, int currentTime){
         if (currentAlert != null){
             if (attemptResolution(currentAlert)){
                 currentAlert.resolve(currentTime);
@@ -21,7 +21,7 @@ public class Nurse {
         }
         //where the nurse will get her first case/will get a case if she doesn't have one (if she resolved it or if she didn't have one before.
         while (true){
-            Alert next = queue.dequeue();
+            Alert next = hospital.getNextAlert();
 
             if (next==null){
                 return;
