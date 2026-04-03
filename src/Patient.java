@@ -25,7 +25,7 @@ public class Patient {
     public void generateAlerts(Hospital hospital, int currentTime) {
         for (int i = 0; i < deviceCount; i++) {
             Observations obs = devices[i].sample();
-            if (obs != null && obs.dangerous()) {
+            if (obs != null) {
                 Alert alert = new Alert(obs, currentTime);
                 hospital.addAlert(alert);
             }
