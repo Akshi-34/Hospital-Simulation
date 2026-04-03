@@ -7,6 +7,7 @@ public class Simulation {
     private int maxTime;
     private int timeIncrement;
     private int maxPatients;
+    private int maxNurses;
 
 
 
@@ -18,7 +19,7 @@ public class Simulation {
     }
 
     public void setup(){
-        hospital = new Hospital(maxPatients);
+        hospital = new Hospital(maxPatients, maxNurses);
         currentTime = 0;
 
     }
@@ -32,7 +33,7 @@ public class Simulation {
 
     public void process(){
         System.out.println("Total patients: " + hospital.getPatientCount());
-        System.out.println("Max Capacity: " + hospital.maxPatients());
+        System.out.println("Max Capacity: " + hospital.getMaxPatients());
 
     }
 

@@ -25,12 +25,4 @@ public class Alert {
         if (timeResolved == -1) return -1;
         return timeResolved - timeRaised;
     }
-    private boolean urgent;
-    public boolean isUrgent() {
-        return urgent;
-    }
-    public int getResolutionTime() {
-        if (timeResolved == -1) return -1;
-        return timeResolved - timeRaised;
-    }
 }

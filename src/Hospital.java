@@ -5,6 +5,7 @@ public class Hospital {
     private int nurseCount;
     private Queue urgentQueue;
     private Queue normalQueue;
+
     public Hospital(int maxPatients, int numNurses) {
         patients = new Patient[maxPatients];
         patientCount = 0;
@@ -51,8 +52,14 @@ public class Hospital {
         for (int i = 0; i < patientCount; i++) {
             patients[i].generateAlerts(this, currentTime);
         }
+
         for (int i = 0; i < nurseCount; i++) {
-            nurses[i].processAlerts(this, currentTime);
+            if ((urgentQueue.dequeue())!=null){
+                nurses[i].processAlerts(urgentQueue, currentTime);
+            } else {
+                nurses[i].processAlerts(normalQueue, currentTime);
+
+            }
         }
     }
 }
