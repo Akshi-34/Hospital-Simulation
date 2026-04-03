@@ -22,6 +22,9 @@ public class Simulation {
     public void setup(){
         hospital = new Hospital(maxPatients, maxNurses);
         currentTime = 0;
+        for (int i = 0; i < maxPatients; i++) {
+            hospital.addPatient();
+        }
 
     }
 
