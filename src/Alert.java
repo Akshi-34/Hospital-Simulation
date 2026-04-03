@@ -12,7 +12,10 @@ public class Alert {
         timeResolved = time;
     }
     public String toString(){
-        return "Alert at time" + timeRaised + ": " + observation.data();
+        return (urgent ? "[URGENT] " : "[NORMAL] ") +
+                "Alert at time " + timeRaised +
+                " resolved at " + timeResolved +
+                ": " + observation.data();
     }
     private boolean urgent;
     public boolean isUrgent() {
