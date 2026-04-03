@@ -53,12 +53,7 @@ public class Hospital {
         }
 
         for (int i = 0; i < nurseCount; i++) {
-            if ((urgentQueue.dequeue())!=null){
-                nurses[i].processAlerts(urgentQueue, currentTime);
-            } else {
-                nurses[i].processAlerts(normalQueue, currentTime);
-
-            }
+            nurses[i].processAlerts(this, currentTime);
         }
     }
 }
