@@ -8,6 +8,7 @@ public class Simulation {
     private int timeIncrement;
     private int maxNurses;
     private int maxPatients;
+    private int maxNurses;
 
 
 
