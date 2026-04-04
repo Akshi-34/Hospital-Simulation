@@ -38,7 +38,7 @@ public class Hospital {
     public void addAlert(Alert alert) {
         if (alert.isUrgent()) {
             urgentQueue.enqueue(alert);
-        } else {
+        } else if (alert.isNormal()) {
             normalQueue.enqueue(alert);
         }
     }

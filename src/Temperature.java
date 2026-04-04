@@ -5,7 +5,7 @@ public class Temperature extends Observations{
         }
         return false;
     }
-    public boolean nonUrgent(){
+    public boolean normal(){
         if ((celsiusValue>35 && celsiusValue<39.5)){
             return true;
         }

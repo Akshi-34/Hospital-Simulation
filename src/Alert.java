@@ -7,18 +7,29 @@ public class Alert {
         timeRaised = time;
         timeResolved = -1;
         urgent = obs.urgent();
+        normal = obs.normal();
     }
     public void resolve(int time){
         timeResolved = time;
     }
     public String toString(){
-        return (urgent ? "[URGENT] " : "[NORMAL] ") +
-                "Alert at time " + timeRaised + " resolved at " + timeResolved + ": " + observation.data();
+        String alertType=" ";
+        if (urgent){
+            alertType = "URGENT";
+        } else if (normal){
+            alertType = "NORMAL";
+        }
+        return "[" + alertType + "]" + " Alert at time" + timeRaised + " resolved at " + timeResolved + ": " + observation.data();
+
     }
     private boolean urgent;
+    private boolean normal;
+
     public boolean isUrgent() {
         return urgent;
     }
+    public boolean isNormal() {return normal;}
+
     public int getResolutionTime() {
         if (timeResolved == -1) return -1;
         return timeResolved - timeRaised;

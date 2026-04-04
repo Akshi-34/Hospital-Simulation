@@ -2,7 +2,7 @@ public class O2_Saturation extends Observations{
     public boolean urgent(){
         return satValue <= 0.89;
     }
-    public boolean nonUrgent(){
+    public boolean normal(){
         return (satValue<0.92 && satValue>0.89);
     }
     public String data (){ return "O2 Saturation: " + satValue + " SpO2";}

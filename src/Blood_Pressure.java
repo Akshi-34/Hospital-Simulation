@@ -8,7 +8,7 @@ public class Blood_Pressure extends Observations{
         return false;
     }
 
-    public boolean nonUrgent() {
+    public boolean normal() {
         if ((Systolic>=120 && Systolic<130) || Diastolic<80){
             return true;
         } else if((Systolic>=130 && Systolic<140) || (Diastolic>=80 && Diastolic<90)){
