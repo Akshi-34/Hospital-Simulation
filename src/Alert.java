@@ -6,7 +6,7 @@ public class Alert {
         observation = obs;
         timeRaised = time;
         timeResolved = -1;
-        urgent = obs.dangerous();
+        urgent = obs.urgent();
     }
     public void resolve(int time){
         timeResolved = time;
