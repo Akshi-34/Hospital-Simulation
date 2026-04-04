@@ -1,6 +1,12 @@
 public class Temperature extends Observations{
-    public boolean dangerous(){
-        if ((celsiusValue>39.4) || (celsiusValue<35)){
+    public boolean urgent(){
+        if ((celsiusValue>=39.5) || (celsiusValue<35)){
+            return true;
+        }
+        return false;
+    }
+    public boolean nonUrgent(){
+        if ((celsiusValue>35 && celsiusValue<39.5)){
             return true;
         }
         return false;
